@@ -12,7 +12,8 @@
 		delete_flg = false;
 	</select>
 
-	<insert id="save">
+	<insert id="save" parameterType="com.example.demo.entity.Task">
+
 		<!-- 新規タスクの登録 -->
 		INSERT INTO public.task
 		(title, description, deadline,

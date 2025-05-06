@@ -27,55 +27,63 @@ public class Task {
 	/**
 	 * タスクID（自動インクリメントされる一意の識別子）。
 	 */
+	@Column(name = "taskid")
 	private int taskId;
 
 	// タイトル
 	/**
 	 * タスクのタイトル。
 	 */
+	@Column(name = "title")
 	private String title;
 
 	// 説明
 	/**
 	 * タスクの説明。
 	 */
+	@Column(name = "description")
 	private String description;
 
 	// 期限
 	/**
 	 * タスクの締め切り日時。
 	 */
+	@Column(name = "deadline")
 	private LocalDateTime deadline;
 
 	// ステータス
 	/**
 	 * タスクのステータス（例: 1 - 未着手, 2 - 作業中, 3 - 完了）。
 	 */
+	@Column(name = "status")
 	private int status;
 
 	// ユーザーID
 	/**
 	 * ユーザーID（タスクを所有するユーザーの識別子）。
 	 */
+	@Column(name = "userid")
 	private int userId;
 
 	// 削除フラグ
 	/**
 	 * 削除フラグ（タスクが削除されたかどうかを示す）。
 	 */
-	@Column(columnDefinition = "boolean default false")
+	@Column(name = "delete_flg",columnDefinition = "boolean default false")
 	private boolean deleteFlg;
 
 	// 更新日時
 	/**
 	 * タスクの更新日時（更新時に現在の日時に自動設定）。
 	 */
+	@Column(name = "updatedAt")
 	private LocalDateTime updatedAt;
 
 	// 作成日時
 	/**
 	 * タスクの作成日時（デフォルトは現在の日時）。
 	 */
+	@Column(name = "created_at")
 	private LocalDateTime createdAt;
 
 	// ここから下のメソッド、getだけだったりsetだけだったりした。戻り値指定してなかったり、引数指定してなかったりもした

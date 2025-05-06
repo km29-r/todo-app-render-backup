@@ -1,0 +1,11 @@
+com\example\demo\controller\GlobalAdviceController.class
+com\example\demo\service\TaskServiceImpl.class
+com\example\demo\controller\TaskController.class
+com\example\demo\service\TaskService.class
+com\example\demo\ToodooApplication.class
+com\example\demo\entity\Task.class
+com\example\demo\form\TaskForm.class
+com\example\demo\mapper\TaskMapper.class
+com\example\demo\repository\TaskRepository.class
+com\example\demo\common\Constants.class
+com\example\demo\ServletInitializer.class
