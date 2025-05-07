@@ -26,10 +26,11 @@
 
 	<!-- タスクIDを指定してタスクを取得 -->
 	<select id="getTask" resultType="com.example.demo.entity.Task">
-		SELECT * FROM public.task WHERE task_id
+		SELECT * FROM public.task WHERE
+		task_id
 		= #{taskId} AND delete_flg = false;
 	</select>
-	<!-- WHERE taskIdとしていたが、DBの実際のカラム名はtask_id そんなことなかった-->
+	<!-- WHERE taskIdとしていたが、DBの実際のカラム名はtask_id そんなことなかった -->
 
 	<!-- タスクの更新 -->
 	<update id="update" parameterType="com.example.demo.entity.Task">
@@ -38,14 +39,16 @@
 		description = #{description},
 		deadline = #{deadline},
 		status = #{status},
-		updated_at = CURRENT_TIMESTAMP
-		WHERE task_id = #{taskId}<!-- task_idがtaskIdのままだった そんなことなかった-->
+		updated_at =
+		CURRENT_TIMESTAMP
+		WHERE task_id = #{taskId}<!-- task_idがtaskIdのままだった そんなことなかった -->
 		<!-- AND updated_at = #{updatedAt} -->
 		;
 	</update>
-	
+
 	<delete id="delete">
-		DELETE FROM task WHERE task_id = #{taskId} AND delete_flg = false;
+		DELETE FROM task WHERE task_id = #{taskId} AND
+		delete_flg = false;
 	</delete>
 </mapper>
 
