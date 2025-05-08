@@ -76,7 +76,7 @@ public class Task {
 	/**
 	 * タスクの更新日時（更新時に現在の日時に自動設定）。
 	 */
-	@Column(name = "updatedAt")
+	@Column(name = "updated_at")
 	private LocalDateTime updatedAt;
 
 	// 作成日時
