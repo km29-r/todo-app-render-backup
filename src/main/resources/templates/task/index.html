@@ -70,9 +70,14 @@
                      th:each="task : ${taskList}"したのをやっぱり削除 -->
 						<!-- <td><a class="btn btn-primary"  th:href="@{/task/edit(taskId=*{taskList.taskId})}">edit</a></td>
 						 -->
-						<td><a class="btn btn-primary" th:href="@{/task/edit(taskId=*{taskId})}">edit</a></td>
+						<!-- <td><a class="btn btn-primary" th:href="@{/task/edit(taskId=*{taskId})}">edit</a></td>
 
-						<td><a class="btn btn-primary" th:href="@{/task/delete(taskId=*{taskId})}">delete</a></td>
+						<td><a class="btn btn-primary" th:href="@{/task/delete(taskId=*{taskId})}">delete</a></td> -->
+						<td><a class="btn btn-primary"
+							th:href="@{/task/edit(taskId=${task.taskId})}">edit</a></td>
+						<td><a class="btn btn-primary"
+							th:href="@{/task/delete(taskId=${task.taskId})}">delete</a></td>
+
 					</tr>
 
 				</tbody>
