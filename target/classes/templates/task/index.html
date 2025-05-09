@@ -53,11 +53,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr 　th:each="taskList : ${taskList}" th:object="${taskList}">
+					<tr th:each="taskList : ${taskList}" th:object="${taskList}">
 						<!-- th:eachhで繰り返し。Listの数だけ繰り返す。${}で括ってあるのがmodelクラスのデータを指定。括っていないのは変数名。th:objectでオブジェクト全体をバインド。オブジェクト名の省略が可能になる。${task.title}を*{title}と書ける。そのオブジェクトに関してまとめられる -->
 						<th scope="row" 　th:text="*{taskId}">1</th>
-						<td 　th:text="*{title}">Title</td>
-						<td 　th:text="*{description}">description</td>
+						<td th:text="*{title}">Title</td>
+						<td th:text="*{description}">description</td>
 						<td
 							th:text="${#temporals.format(taskList.deadline, 'yyyy/MM/dd HH:mm')}">Formatted
 							Deadline</td>
@@ -70,14 +70,11 @@
                      th:each="task : ${taskList}"したのをやっぱり削除 -->
 						<!-- <td><a class="btn btn-primary"  th:href="@{/task/edit(taskId=*{taskList.taskId})}">edit</a></td>
 						 -->
-						<!-- <td><a class="btn btn-primary" th:href="@{/task/edit(taskId=*{taskId})}">edit</a></td>
-
-						<td><a class="btn btn-primary" th:href="@{/task/delete(taskId=*{taskId})}">delete</a></td> -->
 						<td><a class="btn btn-primary"
-							th:href="@{/task/edit(taskId=${task.taskId})}">edit</a></td>
-						<td><a class="btn btn-primary"
-							th:href="@{/task/delete(taskId=${task.taskId})}">delete</a></td>
+							th:href="@{/task/edit(taskId=*{taskId})}">edit</a></td>
 
+						<td><a class="btn btn-primary"
+							th:href="@{/task/delete(taskId=*{taskId})}">delete</a></td>
 					</tr>
 
 				</tbody>
