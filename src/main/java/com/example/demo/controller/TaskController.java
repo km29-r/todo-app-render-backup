@@ -78,7 +78,7 @@ public class TaskController {
 		return "task/edit";
 	}
 
-	@GetMapping(value = "/task/confirm") // 確認画面へ遷移するメソッド
+	@PostMapping(value = "/task/confirm") // 確認画面へ遷移するメソッド
 	public String showConfirmForm(@Validated TaskForm taskForm, BindingResult bindingResult, Model model) {
 
 		// バリデーションチェックでエラーがある場合は変更画面に戻る

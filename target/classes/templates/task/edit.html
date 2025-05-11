@@ -33,7 +33,9 @@ Thymeleafの名前空間を追加する理由は、HTMLテンプレートエン�
         タグの th:action 属性と th:object 属性を追加し、action 属性を修正する。
         th:object 属性を追加しました。これによって、フォームの入力データはtaskFormオブジェクトに自動的にマッピングされます。
          -->
-		<form class="px-4 pt-3 my-3" method="get" th:action="@{/task/confirm}"
+         <!-- <form class="px-4 pt-3 my-3" method="get" th:action="@{/task/confirm}"
+			th:object="${taskForm}"> -->
+		<form class="px-4 pt-3 my-3" method="post" th:action="@{/task/confirm}"
 			th:object="${taskForm}">
 
 
